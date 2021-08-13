@@ -1,0 +1,94 @@
+.uptitle {
+    position: relative;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22 / 18 *100%;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: $main-color;
+
+    padding-left: 96px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 72px;
+        height: 2px;
+        background-color: $main-color;
+    }
+
+    @include selection;
+    @include adaptiv-font(14, 10);
+    @media (min-width: 1920px) {
+        font-size: 14px;
+    }
+}
+
+.title {
+    font-family: 'Chronicle-Display', 'Times New Roman', Times, serif;
+    font-weight: 600;
+    line-height: 77 / 64 * 100%;
+
+    color: #FFFFFF;
+
+    @include selection;
+    @include adaptiv-font(64, 24);
+    @media (min-width: 1920px) {
+        font-size: 64px;
+    }
+}
+
+.subtitle {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22 / 18 * 100%;
+
+    &:hover {
+        a {
+            transform: translate(2px, 0px);
+            
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        color: $main-color;
+        transition: all 200ms ease;
+
+        span {
+            margin-right: 16px;
+
+            @include selection;
+        }
+
+        svg {       
+            fill: $main-color;
+    
+            width: 24px;
+            height: 16px;
+        }
+    }  
+
+    @include adaptiv-font(16, 12);
+    @media (min-width: 1920px) {
+        font-size: 16px;
+    }
+}
+
+.descr {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 178%;
+    color: #FFFFFF;
+
+    @include selection;
+    @include adaptiv-font(18, 14);
+    @media (min-width: 1920px) {
+        font-size: 18px;
+    }
+}
